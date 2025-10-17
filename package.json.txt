@@ -1,0 +1,43 @@
+
+# package.json
+
+```json
+{
+  "name": "digital-bound-rpg",
+  "version": "1.0.0",
+  "description": "Sistema de RPG de mesa Digital Bound - Sistema de Laço e Evolução",
+  "main": "index.js",
+  "scripts": {
+    "build:pdf": "node scripts/build-pdf.js",
+    "build:html": "node scripts/build-html.js",
+    "build:preview": "node scripts/build-pdf.js --preview",
+    "build:print": "node scripts/build-pdf.js --print",
+    "optimize:assets": "node scripts/optimize-images.js",
+    "dev": "npm run build:html -- --watch",
+    "clean": "rm -rf dist/temp && mkdir -p dist/temp",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "rpg",
+    "tabletop",
+    "digimon",
+    "digital-bound",
+    "game-system"
+  ],
+  "author": "Sr. Orthus",
+  "license": "CC BY-NC-SA 4.0",
+  "devDependencies": {
+    "markdown-pdf": "^11.0.0",
+    "puppeteer": "^21.0.0",
+    "sharp": "^0.32.0",
+    "chokidar": "^3.5.0",
+    "fs-extra": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seu-usuario/digital-bound-rpg.git"
+  }
+}
